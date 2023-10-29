@@ -1,0 +1,8 @@
+stages:
+  train:
+    cmd: /home/sergey/proh/mlops_1/venv/bin/python scripts/train_scripts/train.py data/baselines/train.csv
+    deps:
+      - scripts/train_scripts/train.py
+      - data/baselines/train.csv
+    outs:
+      - data/models/titanic_catboost_model.cbm
